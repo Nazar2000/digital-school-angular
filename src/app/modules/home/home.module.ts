@@ -1,24 +1,20 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { HomeRoutingModule } from './home-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {HttpClientModule} from "@angular/common/http";
-import { HomeComponent } from './src/app/modules/home/home/home.component';
+import {HomeRoutingModule} from './home-routing.module';
+import {HomeComponent} from "./home.component";
+import {SharedModule} from "../../shared/shared.module";
+import {CommonModule} from "@angular/common";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent
-  ],
-  imports: [
-    BrowserModule,
-    HomeRoutingModule,
-    BrowserAnimationsModule,
-    HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        HomeComponent
+    ],
+    imports: [
+        HomeRoutingModule,
+        SharedModule,
+        CommonModule
+    ],
+    providers: [],
 })
-export class HomeModule { }
+export class HomeModule {
+}

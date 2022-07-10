@@ -10,10 +10,10 @@ export class GlobalService {
   }
 
   getUsers() {
-    return this.api.get('/users');
+    return this.api.get('users');
   }
 
   createUser() {
-    return this.api.post('/users', {name: 'new', email: 'qqqqq'});
+    return this.api.post('users', {name: 'new', email: 'qqqqq'});
   }
 }

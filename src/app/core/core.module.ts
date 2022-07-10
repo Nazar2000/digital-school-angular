@@ -1,4 +1,3 @@
-import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -19,7 +18,6 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   imports: [
-    CommonModule,
     HttpClientModule,
     BrowserAnimationsModule,
     RouterModule,

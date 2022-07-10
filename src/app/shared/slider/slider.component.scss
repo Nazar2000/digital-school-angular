@@ -1,0 +1,30 @@
+.slider-container {
+  width: 800px;
+  height: 450px;
+  background: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+
+  .slider-block {
+    position: relative;
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    margin: auto;
+
+    mat-icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+
+      &:first-of-type {
+        right: auto;
+        left: 0;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

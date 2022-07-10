@@ -1,0 +1,9 @@
+<div class="slider-container">
+    <div class="slider-block" *ngFor="let slide of sliderList;let i = index" [hidden]="i != activeIndex">
+        {{slide.title}}
+        <mat-icon aria-hidden="false" aria-label="Example home icon"
+                  (click)="prevSlide()">navigate_next
+        </mat-icon>
+        <mat-icon aria-hidden="false" aria-label="Example home icon" (click)="nextSlide()">navigate_next</mat-icon>
+    </div>
+</div>
