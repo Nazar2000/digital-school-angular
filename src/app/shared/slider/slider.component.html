@@ -1,9 +1,19 @@
 <div class="slider-container">
     <div class="slider-block" *ngFor="let slide of sliderList;let i = index" [hidden]="i != activeIndex">
-        {{slide.title}}
-        <mat-icon aria-hidden="false" aria-label="Example home icon"
-                  (click)="prevSlide()">navigate_next
+        <img src="../../../assets/images/slide.webp" alt="">
+        <h1>{{slide.title}}</h1>
+        <p>{{slide.description}}</p>
+        <mat-icon [ngClass]="{'mat-icon-disabled' : activeIndex == 0}"
+                  aria-hidden="false"
+                  aria-label="Example home icon"
+                  (click)="prevSlide()">
+            navigate_next
         </mat-icon>
-        <mat-icon aria-hidden="false" aria-label="Example home icon" (click)="nextSlide()">navigate_next</mat-icon>
+        <mat-icon [ngClass]="{'mat-icon-disabled' : i === sliderList.length-1}"
+                  aria-hidden="false"
+                  aria-label="Example home icon"
+                  (click)="nextSlide()">
+            navigate_next
+        </mat-icon>
     </div>
 </div>

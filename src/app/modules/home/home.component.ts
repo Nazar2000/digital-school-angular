@@ -8,13 +8,13 @@ import {Component, OnInit} from '@angular/core';
 export class HomeComponent implements OnInit {
     sliderList = [{
         title: 'Електронний журнал',
-        description: '',
+        description: 'Електронний журнал - це цифровий та зручний спосіб оцінювання учнів для вчителів, які хочуть спростити робочі будні',
     }, {
         title: 'Розклад занять',
-        description: '',
+        description: 'Розклад занять - це можливість тримати список зянять постійно "під рукою", не тільки для вчителів, а й для батьків.',
     }, {
         title: 'Електронний щоденник',
-        description: '',
+        description: 'Електронний щоденник - це оцифрована та інноваційна можливість ... ',
     }]
 
     constructor() {
