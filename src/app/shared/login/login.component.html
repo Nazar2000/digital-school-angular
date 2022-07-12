@@ -1,1 +1,33 @@
-<p>login works!</p>
+<div class="login-dialog">
+    <h2 mat-dialog-title>Ввійти в систему</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="loginFormSubmit()">
+        <mat-dialog-content class="mat-typography">
+            <mat-form-field appearance="outline">
+                <mat-label>E-mail</mat-label>
+                <input formControlName="email" matInput placeholder="E-mail">
+                <mat-error *ngIf="loginForm.get('email')?.errors?.required" class="text-danger">
+                    Дане поле обов'язкове
+                </mat-error>
+                <mat-error *ngIf="loginForm.get('email')?.errors?.pattern" class="text-danger">
+                    Укажіть дійсний адреса електронної пошти
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Пароль</mat-label>
+                <input formControlName="password" matInput type="{{typeOfInputPassword?'password':'text'}}"
+                       placeholder="Пароль">
+                <mat-icon matSuffix (click)="typeOfInputPassword = !typeOfInputPassword">visibility</mat-icon>
+                <mat-error *ngIf="loginForm.get('password')?.errors?.required" class="text-danger">
+                    Дане поле обов'язкове
+                </mat-error>
+                <mat-error *ngIf="loginForm.get('password')?.errors?.minlength" class="text-danger">
+                    Укажіть пароль з мінімальною довжиною в 8 символів
+                </mat-error>
+            </mat-form-field>
+        </mat-dialog-content>
+        <mat-dialog-actions>
+            <button mat-button mat-dialog-close>Закрити</button>
+            <button mat-button type="submit">Ввійти</button>
+        </mat-dialog-actions>
+    </form>
+</div>

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  BACKEND_API: 'http://bc04-193-186-9-69.ngrok.io/'
+  BACKEND_API: 'http://25a0-193-186-9-69.ngrok.io/'
 };
 
 /*

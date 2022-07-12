@@ -12,3 +12,8 @@ body {
   color: lightgray;
   cursor: not-allowed !important;
 }
+
+.mat-dialog-container {
+  border-radius: 20px !important;
+  background: linear-gradient(rgb(55, 146, 218) 0%, rgb(202, 210, 82) 100%);
+}

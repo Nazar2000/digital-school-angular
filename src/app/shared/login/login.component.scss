@@ -1,0 +1,59 @@
+.login-dialog {
+  height: 350px;
+  width: 350px;
+
+  h2 {
+    font-family: "Marck Script", cursive;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+  }
+
+  mat-dialog-content {
+    height: 258px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    ::ng-deep {
+      /* Border */
+      .mat-form-field-appearance-outline .mat-form-field-outline {
+        color: white;
+      }
+
+      /* Font color */
+      .mat-hint, input, ::placeholder, .mat-form-field-label {
+        color: white;
+      }
+    }
+
+    mat-form-field {
+      width: 100%;
+      color: white;
+      border-color: white;
+    }
+  }
+
+  mat-icon {
+    cursor: pointer;
+  }
+
+  mat-dialog-actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+    button {
+      color: #f6f600;
+      font-family: 'Marck Script', cursive;
+      font-size: 24px;
+      background-color: #0000FFFF;
+
+      &:last-of-type {
+        margin-left: 10px;
+        background-color: #f6f600;
+        color: #0000FFFF;
+      }
+    }
+  }
+}
